@@ -58,11 +58,11 @@ YEAR = 2024
 AUTHOR = "AJC"
 VERSION = __version__
 HELP_URL = "https://qfluentwidgets.com"
-REPO_URL = "https://github.com/"
-EXAMPLE_URL = "https://github.com/"
-FEEDBACK_URL = "https://github.com/"
-RELEASE_URL = "https://github.com/"
-SUPPORT_URL = "https://github.com/"
+REPO_URL = "https://github.com/iewknewon/lalala/tree/master"
+EXAMPLE_URL = "https://github.com/iewknewon/lalala/tree/master"
+FEEDBACK_URL = "https://github.com/iewknewon/lalala/tree/master"
+RELEASE_URL = "https://github.com/iewknewon/lalala/tree/master"
+SUPPORT_URL = "https://github.com/iewknewon/lalala/tree/master"
 
 
 cfg = Config()

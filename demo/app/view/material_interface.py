@@ -119,7 +119,7 @@ class MaterialInterface(GalleryInterface):
         self.addExampleCard(
             self.tr('遥感影像'),
             self.widget,
-            'https://github.com/',
+            'https://github.com/iewknewon/lalala/tree/master',
             stretch=1
         )
 
@@ -228,6 +228,9 @@ class MaterialInterface(GalleryInterface):
         if result is not None:
             self.result = result
 
+            cv2.imshow('Fusion', result)
+            cv2.waitKey(0)
+            cv2.destroyAllWindows()
 
     def IHSFusion(self, Ms, Pan):
         # 将多光谱图像从BGR转换到HSV

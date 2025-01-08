@@ -55,7 +55,7 @@ class BasicInputInterface(GalleryInterface):
         # 创建下拉框
         self.comboBox_filter = ComboBox()  # 创建下拉框
         self.comboBox_filter.setPlaceholderText("请选择图像滤波方法")
-        items = ['中值滤波', '高斯滤波', 'Sobel算子', 'Laplace算子']  # 下拉框的选项
+        items = ['中值滤波', '高斯滤波', '均值滤波', '双边滤波']  # 下拉框的选项
         self.comboBox_filter.addItems(items)  # 添加下拉框的选项
         self.comboBox_filter.setCurrentIndex(-1)  # 设置下拉框的默认选项
         self.comboBox_filter.setFixedWidth(100)  # 设置下拉框的宽度
@@ -122,7 +122,7 @@ class BasicInputInterface(GalleryInterface):
         self.addExampleCard(
             self.tr('遥感影像'),
             self.widget,
-            'https://github.com/',
+            'https://github.com/iewknewon/lalala/tree/master',
             stretch=1
         )
 
@@ -137,9 +137,9 @@ class BasicInputInterface(GalleryInterface):
             res = 1
         elif comboBox_value == '高斯滤波':
             res = 2
-        elif comboBox_value == 'Sobel算子':
+        elif comboBox_value == '均值滤波':
             res = 3
-        elif comboBox_value == 'Laplace算子':
+        elif comboBox_value == '双边滤波':
             res = 4
         else:
             res = -1
@@ -249,10 +249,10 @@ class BasicInputInterface(GalleryInterface):
                 self.showFlyout("WARNING", "参数错误： 参数Ksize必须是奇数！")
                 return
             result = cv2.GaussianBlur(img, (ksize_value, ksize_value), stdx_value, stdy_value)
-        elif enum == 3:  # Sobel算子
-            result = cv2.Sobel(img, cv2.CV_64F, 1, 0, ksize=3)  # X方向边缘检测
-        elif enum == 4:  # Laplace算子
-            result = cv2.Laplacian(img, cv2.CV_64F)
+        elif enum == 3:
+            result = cv2.blur(img,(5, 5))
+        elif enum == 4:
+            result = cv2.bilateralFilter(img, 9, 75, 75)
         else:
             self.showFlyout("WARNING", "请先选择图像滤波方法！")
             return

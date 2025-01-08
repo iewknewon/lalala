@@ -114,7 +114,7 @@ class LayoutInterface(GalleryInterface):
         self.addExampleCard(
             self.tr('遥感影像'),
             self.widget,
-            'https://github.com/',
+            'https://github.com/iewknewon/lalala/tree/master',
             stretch=1
         )
 

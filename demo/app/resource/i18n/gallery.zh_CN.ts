@@ -1651,7 +1651,7 @@ In that case, I would accept it no matter which side the ball falls on.</source>
     <message>
         <location filename="../../view/gallery_interface.py" line="42"/>
         <source>Documentation</source>
-        <translation>在线文档</translation>
+        <translation>Ui库在线文档</translation>
     </message>
     <message>
         <location filename="../../view/gallery_interface.py" line="44"/>

@@ -131,9 +131,9 @@ class SettingInterface(ScrollArea):
             self.tr('财源滚滚！！'),
             FIF.INFO,
             self.tr('About'),
-            '© ' + self.tr('Copyright') + f" {2023}, {'娄雨轩 魏子杰 柳世钢'}. " +
+            '© ' + self.tr('Copyright') + f" {2024}, {'AJC'}. " +
             # self.tr('Version') + " " + VERSION,
-            self.tr('遥感原理与图像处理期末作业') + " " + "指导老师：胡忠文",
+            self.tr('遥感原理与图像处理期末作业') ,
             self.aboutGroup
         )
 
